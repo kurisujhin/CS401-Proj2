@@ -2,6 +2,7 @@ import os
 import pickle
 from flask import Flask, request,jsonify
 import json
+import wget
 
 def create_app(test_config=None):
     # create and configure the app
