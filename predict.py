@@ -1,4 +1,5 @@
 import os
+import urllib.request
 import pickle
 from flask import Flask, request,jsonify
 import json
@@ -8,6 +9,7 @@ def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__)
     app.model=pickle.load(open('cntry_ml_model_v0.pickle','rb'))
+    urllib.request.urlretrieve("https://github.com/kurisujhin/CS401-Proj2/raw/master/cntry_ml_model_v0.pickle", filename = "cntry_ml_model_v0.pickle")
 #     app.config.from_mapping(
 #         SECRET_KEY='dev',
 #         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
@@ -37,7 +39,6 @@ def create_app(test_config=None):
         )
 
     return app
-
 app=create_app()
 
 if __name__ == "__main__":

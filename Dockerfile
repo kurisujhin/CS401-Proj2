@@ -4,7 +4,6 @@ WORKDIR ./
 
 COPY predict.py ./
 COPY requirements.txt ./requirements.txt
-COPY cntry_ml_model_v0.pickle ./
 RUN pip install -r requirements.txt 
 ENV FLASK_APP predict
 
