@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: us-mlpredictor
-        image: docker.io/kurisuandhutao/cs401_proj2:0.0.4
+        image: docker.io/kurisuandhutao/cs401_proj2:v0.0.4
         ports:
         - containerPort: 5018
