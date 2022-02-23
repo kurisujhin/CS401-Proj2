@@ -33,7 +33,7 @@ def create_app(test_config=None):
         data = json.loads(request.get_data())
         return jsonify(
             is_american=str(app.model.predict([data['text']])[0]),
-            version="kurisu_0.0.2",
+            version="kurisu_0.0.3",
             model_data="2022/02/20"
         )
 
