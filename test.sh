@@ -1,0 +1,1 @@
+wget --server-response --post-data '{"text":"#covid 19 new york"}' http://10.106.104.56:5018/api/american
